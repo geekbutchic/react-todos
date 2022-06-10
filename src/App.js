@@ -71,8 +71,8 @@ const ToDoComponent = () => {
         id="submit-button"
         value={submit}
         onClick={() => {
-          setSubmit([...submit, title, description, importance])
-          console.log(setSubmit);
+          const todo = [...submit, title, description, importance]
+          setSubmit(todo)
         }}
       >
         SUBMIT
@@ -83,9 +83,9 @@ const ToDoComponent = () => {
         return (
           <div id={`${todo}-ID`}>
             <ul>
-            <p>Title: {todo.title}</p>
-            <p>Description: {todo.description}</p>
-            <p>Importance: {todo.importance}</p>
+            <p>Title: {title}</p>
+            <p>Description: {description}</p>
+            <p>Importance: {importance}</p>
             </ul>
           </div>
         )
