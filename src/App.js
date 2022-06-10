@@ -17,9 +17,9 @@ const ToDoComponent = () => {
   const [description, setDescription] = useState("Description");
   const [importance, setImportance] = useState();
   const [submit, setSubmit] = useState([{
-    title : "Target",
-    description: "Buy Shampoo",
-    importance: "High",
+    title : "",
+    description: "",
+    importance: "",
 }]);
 
   return (
