@@ -16,12 +16,17 @@ const ToDoComponent = () => {
   const [title, setTitle] = useState("Add Todo");
   const [description, setDescription] = useState("Description");
   const [importance, setImportance] = useState();
-  const [submit, setSubmit] = useState();
+  const [submit, setSubmit] = useState([{
+    title : "Target",
+    description: "Buy Shampoo",
+    importance: "High",
+}]);
 
   return (
     <div className="app-container">
       <div id="title">
         <h4>Title</h4>
+        {/* Title Input */}
         <input
           id="text-input"
           value={title}
@@ -31,6 +36,7 @@ const ToDoComponent = () => {
           }}
         ></input>
       </div>
+      {/* Description Input */}
       <div>
         <h4>Description</h4>
         <input
@@ -42,6 +48,7 @@ const ToDoComponent = () => {
           }}
         ></input>
       </div>
+      {/* Importance Dropdown */}
       <div>
         <h4>Importance</h4>
         <select
@@ -59,17 +66,30 @@ const ToDoComponent = () => {
       </div>
       <hr></hr>
       <div>
+      {/* Submit Button */}
       <button
         id="submit-button"
         value={submit}
         onClick={() => {
-          setSubmit("Clicked");
-          console.log(submit);
+          setSubmit([...submit, title, description, importance])
+          console.log(setSubmit);
         }}
       >
         SUBMIT
       </button>
       </div>
+      <h2>New Todo</h2>
+      {submit.map((todo) => {
+        return (
+          <div id={`${todo}-ID`}>
+            <ul>
+            <p>Title: {todo.title}</p>
+            <p>Description: {todo.description}</p>
+            <p>Importance: {todo.importance}</p>
+            </ul>
+          </div>
+        )
+      })}
     </div>
   );
 };
