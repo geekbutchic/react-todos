@@ -20,13 +20,13 @@
             const newTitle = event.target.value
             setTitle(title)
         }}>
-    * The first text input field should set a state variable called title.
-    * The second text input field should set a state variable called description.
-    * The dropdown field should have 3 values "low", "medium" and "high" and should set a state variable called importance.
+    * The first text input field should set a state variable called title. ✅
+    * The second text input field should set a state variable called description. ✅
+    * The dropdown field should have 3 values "low", "medium" and "high" and should set a state variable called importance. ✅
     * The button should say submit and onClick, it should push a new object into a state variable called toDoList with the current values inputted by the user. E.G. If I type a title of "New Todo", a description of "My new todo", select an importance of "medium", and press submit, the state variable toDoList should look like this:
         * [{
             title: "New Todo",
             description: "My new Todo",
             importance: "medium"
           }]
-    * Finally, render the list of todo's stored in toDoList to the page.
+    * Finally, render the list of todo's stored in toDoList to the page. ✅
